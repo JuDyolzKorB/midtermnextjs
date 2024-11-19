@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #d4b2b2c2;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-weight: bolder;
+  font-size: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--foreground);
+  border-bottom: 4px solid #772424;
+  text-align: center;
+  margin-top: 30px;
+}
+
+div.taskinput {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #036f4d;
+}
+
+button:active {
+  background-color: #028c5d;
+}
+
+input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #04AA6D;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background);
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+  background-color: var(--background);
+  box-shadow: 0 4px 8px rgb(99, 99, 99);
+}
+
+span {
+  flex-grow: 1;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+span.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  input {
+    width: 80%;
+  }
+}
